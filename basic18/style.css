@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+.container {
+    border: 2px solid #000;
+    background-color: rgb(24, 100, 97);
+    padding: 10px;
+}
+
+.item {
+    border: 2px solid #000;
+    background-color: rgb(61, 208, 231);
+    padding: 10px;
+}
+
+/* place-self
+align-self justify-self를 같이 단축
+
+
+*/
+
+.container{
+    display: grid;
+    height: 120vh;
+    grid-template-columns: repeat(3,1fr);
+    gap:10px;
+}
+
+.item:nth-child(2){
+    place-self: center center;
+    place-self: center;
+    place-self: start center;
+    place-self: center end;
+}

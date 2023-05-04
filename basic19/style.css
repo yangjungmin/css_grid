@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.container {
+    border: 2px solid #047e33;
+    background-color: rgb(24, 100, 97);
+    padding: 10px;
+}
+
+.item {
+    border: 2px solid #000;
+    background-color: rgb(243, 212, 179);
+    padding: 10px;
+}
+
+/* order
+배치 순서
+
+*/
+
+.container{
+    display: grid;
+    height: 120vh;
+    grid-template-columns: repeat(3,1fr);
+    gap:10px;
+}
+
+.item:nth-child(1){order:3}
+.item:nth-child(2){order:1}
+.item:nth-child(3){order:2}

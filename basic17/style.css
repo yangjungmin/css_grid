@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+.container {
+    border: 2px solid #000;
+    background-color: rgb(245, 117, 43);
+    padding: 10px;
+}
+
+.item {
+    border: 2px solid #000;
+    background-color: rgb(135, 61, 231);
+    padding: 10px;
+}
+
+/* justify-self 개별 아이템 세로 정렬
+
+
+*/
+
+.container{
+    display: grid;
+    height: 120vh;
+    grid-template-columns: repeat(3,1fr);
+    gap:10px;
+}
+
+.item:nth-child(2){
+    justify-self: center;
+    justify-self: start;
+    justify-self: end;
+}
