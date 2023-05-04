@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.container {
+    border: 2px solid #000;
+    background-color: rgb(238, 255, 0);
+    padding: 10px;
+}
+
+.item {
+    border: 2px solid #000;
+    background-color: rgb(225, 211, 255);
+    padding: 10px;
+}
+
+/* align-items-각 셀안에에서의 움직임 */
+
+.container{
+    display: grid;
+    gap:10px;
+    grid-template-columns: repeat(3,1fr);
+    height: 120vh;
+    align-items: stretch;
+    align-items: start;
+    align-items: center;
+    align-items: end;
+}
+.item{}

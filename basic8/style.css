@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.container{
+    border: 2px solid #000;
+    background-color: rgb(32, 52, 114);
+    padding: 10px;}
+
+.item{border: 2px solid #000;
+     background-color: rgb(255, 198, 230);
+     padding: 10px;}
+
+
+/* grid-template-area = 각 영역의 이름을 붙이고 그 이름을 이용해서 배치하는 방법 */
+/* 빈칸만들기 - 마침표는 셀을 빈칸으로 만든다 (마침표대신 none,.. 여러개의 마침표로 표현할 수 있다
+   공백없이 마침표를 여러개 찍으면 하나의 마침표와 같다.)
+   사이간격은 한칸이상만 띄우면 됨, 여러 칸 띄어도 한칸과 같다. */
+
+.container{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: 
+    'header header header'
+    'side-a main side-b'
+    '.... ..... .....'
+    'footer footer footer';
+    height: 80vh;
+    grid-auto-rows: 100px 1fr 30px 100px;
+}
+
+.header{grid-area:header;}
+.side-a{grid-area:side-a;}
+.side-b{grid-area:side-b;}
+.main{grid-area:main;}
+.footer{grid-area:footer}

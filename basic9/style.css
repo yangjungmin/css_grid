@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+.container {
+    border: 2px solid #000;
+    background-color: rgb(255, 62, 62);
+    padding: 10px;
+}
+
+.item {
+    border: 2px solid #000;
+    background-color: rgb(112, 255, 167);
+    padding: 10px;
+}
+
+
+/* grid-auto-flow
+자동배치 알고리즘
+아이템이 자동 배치되는 흐름을 결정하는 속성입니다. */
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(25%,auto));
+    grid-template-rows:repeat(5,minmax(50px,auto));
+}
+
+
+.item:nth-child(2){grid-column: auto/span 3;}
+.item:nth-child(5){grid-column: auto/span 3;}
+.item:nth-child(5){grid-column: auto/span 3;}
+.item:nth-child(6){grid-column: auto/span 2;}
+.item:nth-child(8){grid-column: auto/span 4;}

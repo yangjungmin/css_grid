@@ -1,0 +1,28 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+
+.container{
+    border: 2px solid #000;
+    background-color: rgb(32, 52, 114);
+    padding: 10px;}
+
+.item{border: 2px solid #000;
+     background-color: rgb(255, 198, 230);
+     padding: 10px;}
+
+
+.container{
+    display: grid;
+    grid-template-columns: 50px;
+    /* grid-template에서 정의의 통제를 받지 않는것들은 grid-auto에서 통제함 */
+    grid-auto-columns: 1fr 2fr;
+    gap:1rem
+    
+}
+.item{}
+.item:nth-child(1){grid-column: 2;}
+.item:nth-child(2){grid-column: 3;}
+.item:nth-child(3){grid-column: 4;}
+.item:nth-child(4){grid-column: 5;}
+.item:nth-child(5){grid-column: 6;}
+.item:nth-child(6){grid-column: 7;}
